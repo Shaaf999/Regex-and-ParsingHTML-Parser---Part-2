@@ -3,15 +3,15 @@ t= int(input())
 class MyHTMLParser(HTMLParser):
     def handle_comment(self,data):
         if len(data.split('\n')) != 1:
-            print('>>> Multi-line Comment')
+            print('>>> Multi-line Comment')   # prints the string
         else:    
-            print('>>> Single-line Comment')
-        print(data.replace("\r", "\n"))    
-    def handle_data(self, data):
+            print('>>> Single-line Comment')   # prints the string
+        print(data.replace("\r", "\n"))     # prints the data in input
+    def handle_data(self, data): 
         if len(data.split('\n')) ==1:
        #if data.strip():   # alternate if statement
-            print('>>> Data')
-            print (data)
+            print('>>> Data')    # prints the string
+            print (data)          # prints the data in input
     
     
   
